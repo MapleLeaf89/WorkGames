@@ -1,0 +1,32 @@
+.launcher-back {
+  position: fixed;
+  top: max(12px, env(safe-area-inset-top));
+  left: max(12px, env(safe-area-inset-left));
+  z-index: 2147483647;
+  min-width: 92px;
+  min-height: 40px;
+  padding: 0 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 8px;
+  color: #ffffff;
+  background: rgba(20, 22, 24, 0.72);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+  font-family: "Microsoft YaHei", "PingFang SC", "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  backdrop-filter: blur(10px);
+}
+
+.launcher-back:hover,
+.launcher-back:focus-visible {
+  color: #171717;
+  background: #ffd166;
+  border-color: #ffd166;
+  outline: none;
+}
