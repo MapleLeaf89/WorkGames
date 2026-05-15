@@ -17,14 +17,14 @@ body {
 }
 
 .launcher-shell {
-  width: min(1120px, calc(100% - 32px));
+  width: min(1180px, calc(100% - 32px));
   min-height: 100vh;
   margin: 0 auto;
-  padding: 42px 0;
+  padding: 36px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 26px;
+  gap: 22px;
 }
 
 .launcher-header {
@@ -51,12 +51,12 @@ h1 {
 
 .game-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .game-card {
-  min-height: 290px;
+  min-height: 238px;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -152,6 +152,51 @@ h1 {
 
 .card-tiantian .game-action {
   background: #9be564;
+}
+
+.card-mishi .game-action {
+  background: #f4a261;
+}
+
+.card-qiuqiu .game-action {
+  background: #80ed99;
+}
+
+.card-number .game-action {
+  background: #4cc9f0;
+}
+
+.card-qiuqiu .game-cover,
+.card-number .game-cover {
+  display: grid;
+  place-items: center;
+}
+
+.card-qiuqiu .game-cover {
+  background: radial-gradient(circle at 50% 42%, #ffffff 0 28%, #6dd3ff 29% 52%, #0d5aa7 100%);
+}
+
+.card-number .game-cover {
+  background: linear-gradient(135deg, #0b48a8, #36c5ff 48%, #ffd166);
+}
+
+.card-qiuqiu .game-cover img,
+.card-number .game-cover img {
+  width: min(72%, 270px);
+  height: min(72%, 270px);
+  object-fit: contain;
+  transform: scale(1);
+}
+
+.card-qiuqiu:hover .game-cover img,
+.card-number:hover .game-cover img {
+  transform: scale(1.08);
+}
+
+@media (max-width: 1020px) {
+  .game-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 760px) {
